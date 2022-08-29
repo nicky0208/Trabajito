@@ -1,0 +1,33 @@
+@model formy.Models.Matricula;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  
+    <form asp-controller="Matricula" asp-action="Crear"> 
+      <label asp-for="Nombre"></label><br>
+      <input asp-for="Nombre"><br>
+      <label>Cursos</label><br>
+     <input asp-for="Matematica">
+     <label asp-for="Matematica"></label><br>
+     <input asp-for="Lenguaje">
+     <label asp-for="Lenguaje"></label><br>
+     <input asp-for="Historia">
+     <label asp-for="Historia"></label>
+     <button type="submit">Crear</button>
+    </form>
+    @ViewData["Mensaje"]<br>
+    @ViewData["SubTotal"]<br>
+    @ViewData["IGV"]<br>
+    @ViewData["Total"]
+  
+  
+</body>
+</html>
